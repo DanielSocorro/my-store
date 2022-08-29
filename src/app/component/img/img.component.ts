@@ -9,11 +9,13 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
 
   img: string = '';
 
+
   @Input('img')
-  set changeImg(newImg: string) {
+  set changeImg(newImg: string){
     this.img = newImg;
-    console.log('change just img =>' ,this.img);
-    //code
+    console.log('change just img =>' ,this.img)
+    // code
+
   }
   @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
@@ -31,7 +33,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
       //before render
       //change inputs - n° times
       console.log('ngOnChanges', 'imgValue = >', this.img);
-      console.log(changes);
+      console.log('changes', changes);
       // if (changes.) {
         // // code
         // }
